@@ -44,8 +44,11 @@
                 },
                 "nb": {
                     "type": "string",
-                    "default": "assets/2_data_analysis.ipynb",
-                    "description": "The Analysis notebook (as script to generate report files using in VueGen)"
+                    "default": "${projectDir}/assets/2_data_analysis.ipynb",
+                    "description": "The Analysis notebook (as script to generate report files using in VueGen)",
+                    "pattern": "^\\S+\\.ipynb$",
+                    "format": "file-path",
+                    "mimetype": "text/ipynb"
                 },
                 "input_type": {
                     "type": "string",
