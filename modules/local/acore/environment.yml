@@ -14,6 +14,7 @@ dependencies:
   - matplotlib=3.10.6
   - papermill=2.6.0
   - ipykernel=7.0.0
+  - inmoose=0.8.1
   - pip:
       - acore==0.2.0
       - vuecore==0.1.1
