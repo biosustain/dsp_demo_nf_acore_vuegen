@@ -1,0 +1,29 @@
+Changes in component 'nf-core/vuegen'
+Changes in 'vuegen/environment.yml':
+--- modules/nf-core/vuegen/environment.yml
++++ modules/nf-core/vuegen/environment.yml
+@@ -4,5 +4,5 @@
+   - bioconda
+   - conda-forge
+ dependencies:
+-  - bioconda::vuegen=0.3.2
++  - bioconda::vuegen=0.5.1
+   - python=3.11
+
+'modules/nf-core/vuegen/meta.yml' is unchanged
+Changes in 'vuegen/main.nf':
+--- modules/nf-core/vuegen/main.nf
++++ modules/nf-core/vuegen/main.nf
+@@ -1,7 +1,7 @@
+ process VUEGEN {
+     label 'process_single'
+     conda "${moduleDir}/environment.yml"
+-    container "dtu_biosustain_dsp/vuegen:v0.3.2-nextflow"
++    container "dtu_biosustain_dsp/vuegen:v0.5.1-nextflow"
+ 
+     input:
+         val input_type
+
+'modules/nf-core/vuegen/tests/main.nf.test.snap' is unchanged
+'modules/nf-core/vuegen/tests/main.nf.test' is unchanged
+************************************************************
