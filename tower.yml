@@ -1,3 +1,5 @@
 reports:
-  quarto_report.html:
-    display: "VUEGen HTML report"
+  "**/quarto_report.html":
+    display: "VUEGen Quarto HTML report"
+  vuegen/quarto_report/quarto_report.html:
+    display: "VUEGen Quarto HTML report (exact path)"
