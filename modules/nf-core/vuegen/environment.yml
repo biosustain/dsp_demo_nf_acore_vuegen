@@ -5,4 +5,4 @@ channels:
   - conda-forge
 dependencies:
   - bioconda::vuegen=0.5.1
-  - python=3.11
+  - python=3.12
