@@ -40,18 +40,18 @@ include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_prot
 //
 // WORKFLOW: Run main analysis pipeline depending on type of input
 //
-workflow NFCORE_PROTEOMICSANALYSIS {
+// workflow NFCORE_PROTEOMICSANALYSIS {
 
 
 
-    main:
+//     main:
 
-    //
-    // WORKFLOW: Run pipeline
-    //
-    PROTEOMICSANALYSIS (
-    )
-}
+//     //
+//     // WORKFLOW: Run pipeline
+//     //
+//     PROTEOMICSANALYSIS (
+//     )
+// }
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RUN MAIN WORKFLOW
@@ -75,7 +75,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    NFCORE_PROTEOMICSANALYSIS (
+    PROTEOMICSANALYSIS (
         // PIPELINE_INITIALISATION.out.dir_input
     )
     //

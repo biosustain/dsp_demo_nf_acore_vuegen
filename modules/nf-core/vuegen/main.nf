@@ -9,7 +9,7 @@ process VUEGEN {
         val report_type
 
     output:
-        path "*report", emit: output_folder
+        path "*quarto_report.html", emit: output_folder
         path "versions.yml", emit: versions
 
     when:
