@@ -1,5 +1,11 @@
 reports:
-  "**/quarto_report.html":
+  "quarto_report.html":
     display: "VUEGen Quarto HTML report"
-  vuegen/quarto_report/quarto_report.html:
-    display: "VUEGen Quarto HTML report (exact path)"
+  "report.html":
+    display: "Nextflow execution report"
+  "timeline.html":
+    display: "Nextflow execution timeline"
+  "trace.txt":
+    display: "Nextflow trace file"
+  "dag.html":
+    display: "Nextflow workflow diagram"
