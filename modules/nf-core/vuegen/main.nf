@@ -9,7 +9,7 @@ process VUEGEN {
         val report_type
 
     output:
-        path "*report", emit: output_folder
+        path "quarto_report/quarto_report*", emit: output_folder
         path "versions.yml", emit: versions
 
     when:
@@ -36,7 +36,7 @@ process VUEGEN {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            vuegen: \$( vuegen --version | sed -e "s/vuegen //g" )
+            vuegen: \$( python -c "import vuegen; print(vuegen.__version__)" )
         END_VERSIONS
         """
 
@@ -48,7 +48,7 @@ process VUEGEN {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            vuegen: \$( vuegen --version | sed -e "s/vuegen //g" )
+            vuegen: \$( python -c "import vuegen; print(vuegen.__version__)" )
         END_VERSIONS
         """
 }

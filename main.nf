@@ -18,7 +18,6 @@
 include { PROTEOMICSANALYSIS  } from './workflows/proteomicsanalysis'
 include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_proteomicsanalysis_pipeline'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_proteomicsanalysis_pipeline'
-// include { getGenomeAttribute      } from './subworkflows/local/utils_nfcore_proteomicsanalysis_pipeline'
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,33 +25,11 @@ include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_prot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-// TODO nf-core: Remove this line if you don't need a FASTA file
-//   This is an example of how to use getGenomeAttribute() to fetch parameters
-//   from igenomes.config using `--genome`
-// params.fasta = getGenomeAttribute('fasta')
-
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     NAMED WORKFLOWS FOR PIPELINE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*/
 
-//
-// WORKFLOW: Run main analysis pipeline depending on type of input
-//
-workflow NFCORE_PROTEOMICSANALYSIS {
-
-
-
-    main:
-
-    //
-    // WORKFLOW: Run pipeline
-    //
-    PROTEOMICSANALYSIS (
-    )
-}
-/*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RUN MAIN WORKFLOW
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,8 +52,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    NFCORE_PROTEOMICSANALYSIS (
-        // PIPELINE_INITIALISATION.out.dir_input
+    PROTEOMICSANALYSIS (
     )
     //
     // SUBWORKFLOW: Run completion tasks
